@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/estilos.css" />
+    <script src="./js/main.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Formulario Información Alta Telefónica</h1>
+    <form name="telefonica" action="">
+      <fieldset>
+        <legend>Datos Personales</legend>
+        <label for="nombre">Nombre:</label>
+        <input
+          type="text"
+          class="amarillo"
+          id="nombre"
+          value=""
+          pattern="[a-z][A-Z]{30}"
+          title="Debe introducir caracteres y no exceder la longitud de 30 carácteres"
+        /><br />
+        <label for="apellidos">Apellidos:</label>
+        <input
+          type="text"
+          class="amarillo"
+          id="apellidos"
+          value=""
+          pattern="[a-z][A-Z]{30}"
+          title="Debe introducir caracteres y no exceder la longitud de 60 carácteres"
+        /><br />
+        <label for="direccion">Dirección:</label>
+        <input
+          type="text"
+          class="amarillo"
+          id="direccion"
+          value=""
+          pattern="[a-z][A-Z]{30}"
+          title="Debe introducir caracteres y no exceder la longitud de 60 carácteres"
+        /><br />
+        <label for="postal">Código postal:</label>
+        <input
+          type="text"
+          class="amarillo"
+          id="postal"
+          value=""
+          pattern="\d{5}"
+          title="Debe introducir 5 dígitos"
+        /><br />
+        <label for="localidad">Localidad:</label>
+        <input type="text" class="amarillo" id="localidad" value="" /><br />
+      </fieldset>
+      <fieldset>
+        <legend>Tipo Contratación</legend>
+        <input
+          type="radio"
+          id="contratacion"
+          name="tipo"
+          value="0"
+          checked="checked"
+        />
+        <label for="contratacion">Nueva Contratación</label>
+        <input type="radio" id="portabilidad" name="tipo" value="1" />
+        <label for="portabilidad">Portabilidad</label>
+        <input type="radio" id="cambio" name="tipo" value="2" />
+        <label for="cambio">Cambio de contrato</label><br />
+        <br />
+        <label for="actualCompany">Elija la compañia actual: </label>
+        <select name="actualCompany" id="actualCompany">
+          <option>Movistar</option>
+          <option>Orange</option>
+          <option>Vodafone</option>
+          <option>Yoigo</option>
+          <option>No tengo ninguna compañia</option>
+        </select>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label for="portarA"
+          >En caso de portabilidad, elija la nueva compañia:
+        </label>
+        <select name="portarA" id="portarA">
+          <option>Movistar</option>
+          <option>Orange</option>
+          <option>Vodafone</option>
+          <option>Yoigo</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend>Datos Bancarios</legend>
+        <label for="pais">Pais:</label>
+        <input
+          type="text"
+          class="amarillo"
+          id="pais"
+          value="ES"
+          readonly="readonly"
+        />
+        (sólo válido ES)<br />
+        <label for="iban">Control IBAN:</label>
+        <input
+          type="text"
+          class="amarillo"
+          id="iban"
+          value=""
+          pattern="\d{2}"
+          placeholder="XX"
+          title="Introduzca dígitos y no sobrepase el número máximo de dígitos que se le indica"
+        />
+        (dos dígitos)<br />
+        <label for="entidad">Entidad:</label>
+        <input
+          type="text"
+          class="amarillo"
+          id="entidad"
+          value=""
+          pattern="\d{4}"
+          placeholder="XXXX"
+          title="Introduzca dígitos y no sobrepase el número máximo de dígitos que se le indica"
+        />
+        (cuatro dígitos)<br />
+        <label for="sucursal">Sucursal:</label>
+        <input
+          type="text"
+          class="amarillo"
+          id="sucursal"
+          value=""
+          pattern="\d{4}"
+          placeholder="XXXX"
+          title="Introduzca dígitos y no sobrepase el número máximo de dígitos que se le indica"
+        />
+        (cuatro dígitos)<br />
+        <label for="dc">DC:</label>
+        <input
+          type="text"
+          class="amarillo"
+          id="dc"
+          value=""
+          pattern="\d{2}"
+          placeholder="XX"
+          title="Introduzca dígitos y no sobrepase el número máximo de dígitos que se le indica"
+        />
+        (dos dígitos)<br />
+        <label for="cuenta">Cuenta:</label>
+        <input
+          type="text"
+          class="amarillo"
+          id="cuenta"
+          value=""
+          pattern="\d{10}"
+          placeholder="XXXXXXXXXX"
+          title="Introduzca dígitos y no sobrepase el número máximo de dígitos que se le indica"
+        />
+        (diez dígitos)<br />
+      </fieldset>
+      <fieldset>
+        <legend>Datos Estadísticos - ¿Como nos conoció?</legend>
+        <input type="checkbox" id="tv" name="tv" value="TV" />
+        <label for="tv">A través de la TV</label><br />
+        <input type="checkbox" id="radio" name="radio" value="Radio" />
+        <label for="radio">A través de la radio</label><br />
+        <input type="checkbox" id="internet" name="internet" value="Internet" />
+        <label for="internet">A través de internet</label><br />
+        <input type="checkbox" id="otros" name="otros" value="Otros" />
+        <label for="otros">Otros</label><br />
+        <br />
+        <input
+          type="range"
+          id="rango"
+          name="rango"
+          min="1"
+          max="5"
+          value="1"
+        />Valoración[1-5]<br />
+        <label for="fecha">Fecha de la Encuesta:</label>
+        <input
+          type="date"
+          name="fecha"
+          id="fecha"
+          value="2019-01-01"
+        />Valoración[1-5]<br />
+      </fieldset>
+      <input type="submit" value="Enviar Datos" />
+      <input type="reset" value="Borrar Datos" />
+      <br />
+    </form>
+    <button class="boton" onclick="verValoracion()">Mostrar Valoración</button>
+    <button class="boton" onclick="verCuenta()">Mostrar Cuenta</button>
+    <button class="boton" onclick="verDia()">Mostrar Semana</button>
+  </body>
+</html>
